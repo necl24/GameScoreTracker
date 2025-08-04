@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update Game</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style ="text-align: center;">Update Game Score</h1>
+
+    <form action="/update/{{ game.id }}" method="POST">
+        <!-- Section for Team A -->
+        <h2>Team A</h2>
+        <div>
+            <label for="team_a_name">Team Name:</label>
+            <input type="text" name="team_a_name" id="team_a_name" value="{{ game.team_a_name }}">
+        </div>
+
+        <h3>Players</h3>
+        <div>
+            <!-- Player A1 -->
+            <label for="player_a1_name">Player 1 Name:</label>
+            <input type="text" name="player_a1_name" id="player_a1_name" value="{{ game.player_a1_name }}">
+            <label for="player_a1_score">Score:</label>
+            <input type="number" name="player_a1_score" id="player_a1_score" value="{{ game.player_a1_score }}">
+        </div>
+
+        <div>
+            <!-- Player A2 -->
+            <label for="player_a2_name">Player 2 Name:</label>
+            <input type="text" name="player_a2_name" id="player_a2_name" value="{{ game.player_a2_name }}">
+            <label for="player_a2_score">Score:</label>
+            <input type="number" name="player_a2_score" id="player_a2_score" value="{{ game.player_a2_score }}">
+        </div>
+        
+        <div>
+            <!-- Player A3 -->
+            <label for="player_a3_name">Player 3 Name:</label>
+            <input type="text" name="player_a3_name" id="player_a3_name" value="{{ game.player_a3_name }}">
+            <label for="player_a3_score">Score:</label>
+            <input type="number" name="player_a3_score" id="player_a3_score" value="{{ game.player_a3_score }}">
+        </div>
+
+        <div>
+            <!-- Player A4 -->
+            <label for="player_a4_name">Player 4 Name:</label>
+            <input type="text" name="player_a4_name" id="player_a4_name" value="{{ game.player_a4_name }}">
+            <label for="player_a4_score">Score:</label>
+            <input type="number" name="player_a4_score" id="player_a4_score" value="{{ game.player_a4_score }}">
+        </div>
+        
+        <br>
+        <hr>
+        <br>
+
+        <!-- Section for Team B -->
+        <h2>Team B</h2>
+        <div>
+            <label for="team_b_name">Team Name:</label>
+            <input type="text" name="team_b_name" id="team_b_name" value="{{ game.team_b_name }}">
+        </div>
+
+        <h3>Players</h3>
+        <div>
+            <!-- Player B1 -->
+            <label for="player_b1_name">Player 1 Name:</label>
+            <input type="text" name="player_b1_name" id="player_b1_name" value="{{ game.player_b1_name }}">
+            <label for="player_b1_score">Score:</label>
+            <input type="number" name="player_b1_score" id="player_b1_score" value="{{ game.player_b1_score }}">
+        </div>
+
+        <div>
+            <!-- Player B2 -->
+            <label for="player_b2_name">Player 2 Name:</label>
+            <input type="text" name="player_b2_name" id="player_b2_name" value="{{ game.player_b2_name }}">
+            <label for="player_b2_score">Score:</label>
+            <input type="number" name="player_b2_score" id="player_b2_score" value="{{ game.player_b2_score }}">
+        </div>
+        
+        <div>
+            <!-- Player B3 -->
+            <label for="player_b3_name">Player 3 Name:</label>
+            <input type="text" name="player_b3_name" id="player_b3_name" value="{{ game.player_b3_name }}">
+            <label for="player_b3_score">Score:</label>
+            <input type="number" name="player_b3_score" id="player_b3_score" value="{{ game.player_b3_score }}">
+        </div>
+
+        <div>
+            <!-- Player B4 -->
+            <label for="player_b4_name">Player 4 Name:</label>
+            <input type="text" name="player_b4_name" id="player_b4_name" value="{{ game.player_b4_name }}">
+            <label for="player_b4_score">Score:</label>
+            <input type="number" name="player_b4_score" id="player_b4_score" value="{{ game.player_b4_score }}">
+        </div>
+        
+        <br>
+        <input type="submit" value="Update Game">
+    </form>
+</div>
+{% endblock %}
+

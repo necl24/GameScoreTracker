@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Game Score Tracker</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center;">Game Score Tracker</h1>
+
+    <!-- Form for adding a new game -->
+    <h2 style="text-align: center; margin-top: 2rem;">Add a New Game</h2>
+    <form action="/" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto; padding: 1rem; border: 1px solid #ddd; border-radius: 8px;">
+
+        <!-- Team A Section -->
+        <div>
+            <h3 style="margin-bottom: 0.5rem;">Team A</h3>
+            <div style="margin-bottom: 0.5rem;">
+                <label for="team_a_name" style="font-weight: bold;">Team Name:</label>
+                <input type="text" name="team_a_name" id="team_a_name" placeholder="Enter Team A's Name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            
+            <p style="font-style: italic; margin: 0.5rem 0;">Players</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_a1_name">P1 Name:</label>
+                    <input type="text" name="player_a1_name" id="player_a1_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_a1_score">Score:</label>
+                    <input type="number" name="player_a1_score" id="player_a1_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_a2_name">P2 Name:</label>
+                    <input type="text" name="player_a2_name" id="player_a2_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_a2_score">Score:</label>
+                    <input type="number" name="player_a2_score" id="player_a2_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_a3_name">P3 Name:</label>
+                    <input type="text" name="player_a3_name" id="player_a3_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_a3_score">Score:</label>
+                    <input type="number" name="player_a3_score" id="player_a3_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_a4_name">P4 Name:</label>
+                    <input type="text" name="player_a4_name" id="player_a4_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_a4_score">Score:</label>
+                    <input type="number" name="player_a4_score" id="player_a4_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin: 1rem 0;">
+
+        <!-- Team B Section -->
+        <div>
+            <h3 style="margin-bottom: 0.5rem;">Team B</h3>
+            <div style="margin-bottom: 0.5rem;">
+                <label for="team_b_name" style="font-weight: bold;">Team Name:</label>
+                <input type="text" name="team_b_name" id="team_b_name" placeholder="Enter Team B's Name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <p style="font-style: italic; margin: 0.5rem 0;">Players</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_b1_name">P1 Name:</label>
+                    <input type="text" name="player_b1_name" id="player_b1_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_b1_score">Score:</label>
+                    <input type="number" name="player_b1_score" id="player_b1_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_b2_name">P2 Name:</label>
+                    <input type="text" name="player_b2_name" id="player_b2_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_b2_score">Score:</label>
+                    <input type="number" name="player_b2_score" id="player_b2_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_b3_name">P3 Name:</label>
+                    <input type="text" name="player_b3_name" id="player_b3_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_b3_score">Score:</label>
+                    <input type="number" name="player_b3_score" id="player_b3_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <label for="player_b4_name">P4 Name:</label>
+                    <input type="text" name="player_b4_name" id="player_b4_name" placeholder="Name" style="flex-grow: 1; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                    <label for="player_b4_score">Score:</label>
+                    <input type="number" name="player_b4_score" id="player_b4_score" value="0" style="width: 60px; padding: 0.25rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Add Game" style="margin-top: 1rem; padding: 0.75rem; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    </form>
+    
+    <br>
+    <hr>
+    <br>
+
+    <!-- Displaying the list of games -->
+    <h2 style="text-align: center;">Game History</h2>
+
+    {% if games|length < 1 %}
+    <h4 style="text-align: center;">No games have been added yet!</h4>
+    {% else %}
+    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; text-align: left;">
+        <thead style="background-color: #f2f2f2;">
+            <tr>
+                <th style="padding: 12px; border: 1px solid #ddd;">Date</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Team A (Players)</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Score A</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Team B (Players)</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Score B</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Winner</th>
+                <th style="padding: 12px; border: 1px solid #ddd;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in games %}
+            <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">{{ game.game_date.date() }}</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">
+                    {{ game.team_a_name }}
+                    {% if game.player_a1_name %} <br> ({{ game.player_a1_name }} {{ game.player_a1_score }}) {% endif %}
+                    {% if game.player_a2_name %} <br> ({{ game.player_a2_name }} {{ game.player_a2_score }}) {% endif %}
+                    {% if game.player_a3_name %} <br> ({{ game.player_a3_name }} {{ game.player_a3_score }}) {% endif %}
+                    {% if game.player_a4_name %} <br> ({{ game.player_a4_name }} {{ game.player_a4_score }}) {% endif %}
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd;">{{ game.team_a_total_score }}</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">
+                    {{ game.team_b_name }}
+                    {% if game.player_b1_name %} <br> ({{ game.player_b1_name }} {{ game.player_b1_score }}) {% endif %}
+                    {% if game.player_b2_name %} <br> ({{ game.player_b2_name }} {{ game.player_b2_score }}) {% endif %}
+                    {% if game.player_b3_name %} <br> ({{ game.player_b3_name }} {{ game.player_b3_score }}) {% endif %}
+                    {% if game.player_b4_name %} <br> ({{ game.player_b4_name }} {{ game.player_b4_score }}) {% endif %}
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd;">{{ game.team_b_total_score }}</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">
+                    {% if game.winner_name %}
+                        {{ game.winner_name }}
+                    {% else %}
+                        Draw
+                    {% endif %}
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd;">
+                    <a href="/delete/{{ game.id }}" style="color: red;">Delete</a>
+                    <br>
+                    <a href="/update/{{ game.id }}" style="color: green;">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+
+
+

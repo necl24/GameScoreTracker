@@ -1,0 +1,146 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+ body, html {
+     margin: 0;
+     padding: 0;
+     font-family: 'Inter', sans-serif;
+     /* Using a light gradient for the background */
+     background: linear-gradient(135deg, #e7e0ff 0%, #d8f0ff 100%);
+     color: #343a40; /* Dark gray for text to be highly readable */
+     line-height: 1.6;
+ }
+ 
+ /*
+  * Main Content Container
+  */
+ .content {
+     max-width: 900px;
+     margin: 2rem auto;
+     padding: 2.5rem;
+     background-color: #ffffff;
+     border-radius: 12px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+ 
+ /*
+  * Typography
+  */
+ h1, h2, h3 {
+     font-weight: 700;
+     color: #6a11cb; /* A vibrant purple for headings */
+ }
+ 
+ h1 {
+     text-align: center;
+     font-size: 3rem;
+     margin-bottom: 1rem;
+ }
+ 
+ h2 {
+     font-size: 2rem;
+     margin-top: 2.5rem;
+     border-bottom: none;
+     padding-bottom: 0.5rem;
+     text-align: center;
+ }
+ 
+ /*
+  * Form Styling
+  * Input fields have a light background and a vibrant blue focus state.
+  */
+ form {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+ }
+ 
+ input[type="text"],
+ input[type="number"] {
+     width: 100%;
+     padding: 1rem;
+     background-color: #f1f1f1;
+     border: 1px solid #ced4da;
+     border-radius: 8px;
+     font-size: 1rem;
+     color: #343a40;
+     transition: all 0.3s ease;
+ }
+ 
+ input[type="text"]:focus,
+ input[type="number"]:focus {
+     border-color: #2575fc; /* Vibrant blue from the gradient */
+     outline: none;
+     box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.25);
+ }
+ 
+ input[type="submit"] {
+     background-image: linear-gradient(to right, #6a11cb, #2575fc);
+     color: white;
+     font-weight: 600;
+     cursor: pointer;
+     border: none;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+ 
+ input[type="submit"]:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 4px 15px rgba(106, 17, 203, 0.6);
+ }
+ 
+ /*
+  * Table Styling
+  * The table has a minimalist, light theme with subtle hover effects.
+  */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 2rem;
+     background-color: #ffffff;
+     border-radius: 8px;
+     overflow: hidden;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+ 
+ th, td {
+     padding: 15px 20px;
+     text-align: left;
+     border-bottom: 1px solid #dee2e6;
+ }
+ 
+ th {
+     background-color: #e9ecef;
+     font-weight: 600;
+     color: #495057;
+ }
+ 
+ tr:hover {
+     background-color: #f1f1f1;
+ }
+ 
+ /*
+  * Link and Button Styling
+  * Links use the vibrant colors from the button's gradient for clear visual cues.
+  */
+ a {
+     text-decoration: none;
+     font-weight: 600;
+     transition: color 0.3s ease;
+     color: #2575fc; 
+ }
+ 
+ a.delete-link {
+     color: #dc3545;
+ }
+ 
+ a.delete-link:hover {
+     color: #a8000c;
+ }
+ 
+ a.update-link {
+     color: #6a11cb; 
+ }
+ 
+ a.update-link:hover {
+     color: #4c0a96;
+ }
+  
